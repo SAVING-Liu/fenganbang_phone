@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>模板-分类</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="Expires" content="-1"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta name="description" content="" />
+    <meta name="Keywords" content="" />
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <!---->
+    <link rel="stylesheet" href="./css/zyh_style.css">
+</head>
+<body class="zyh bg-color-f6">
+<div class="public_head">
+    <h3>全部分类</h3>
+    <a class="iconfont icon-fanhui"></a>
+</div>
+
+<div  class="bg-color-white height-50 l-height public-padding-lr border-bottom-ea border-top-ea  margin-top-10 margin-bottom">
+    <span>全部宝贝</span>
+</div>
+
+<main class="bg-color-white">
+    <div class="height-50 l-height margin-lr-10 border-bottom-ea">新品上架</div>
+    <!--把label和选项放在一起-->
+    <div name="toggle-label-f2">
+        <div  class="height-50 l-height flex-row f-j-b border-bottom-ea margin-lr-10">
+            <span>空调维修配件</span>
+            <i class="iconfont icon-xiangxia"></i>
+        </div>
+        <!--选项-->
+        <div name="zyh-label-f2" style="display: none">
+            <div class="flex-row">
+                <span class="l-height height-50 ss-span margin-r-5">基本维修组套</span>
+                <span class="l-height height-50 ss-span">基本维修组套</span>
+            </div>
+            <div class="flex-row margin-top-5">
+                <span class="l-height height-50 ss-span margin-r-5">基本维修组套</span>
+                <span class="l-height height-50 ss-span">基本维修组套</span>
+            </div>
+        </div>
+
+    </div>
+    <!---->
+    <!--把label和选项放在一起-->
+    <div name="toggle-label-f2">
+        <div  class="height-50 l-height flex-row f-j-b border-bottom-ea margin-lr-10">
+            <span>空调维修配件</span>
+            <i class="iconfont icon-xiangshang1"></i>
+        </div>
+        <!--选项-->
+        <div name="zyh-label-f2">
+            <div class="flex-row">
+                <span class="l-height height-50 ss-span margin-r-5">基本维修组套</span>
+                <span class="l-height height-50 ss-span">基本维修组套</span>
+            </div>
+            <div class="flex-row margin-top-5">
+                <span class="l-height height-50 ss-span margin-r-5">基本维修组套</span>
+                <span class="l-height height-50 ss-span">基本维修组套</span>
+            </div>
+        </div>
+
+    </div>
+    <!---->
+    <div class="height-50 l-height margin-lr-10 border-bottom-ea">新品上架</div>
+    <!--把label和选项放在一起-->
+    <div name="toggle-label-f2">
+        <div  class="height-50 l-height flex-row f-j-b border-bottom-ea margin-lr-10">
+            <span>空调维修配件</span>
+            <i class="iconfont icon-xiangxia"></i>
+        </div>
+        <!--选项-->
+        <div name="zyh-label-f2" style="display: none">
+            <div class="flex-row">
+            <span class="l-height height-50 ss-span margin-r-5">基本维修组套</span>
+            <span class="l-height height-50 ss-span">基本维修组套</span>
+            </div>
+            <div class="flex-row margin-top-5">
+            <span class="l-height height-50 ss-span margin-r-5">基本维修组套</span>
+            <span class="l-height height-50 ss-span">基本维修组套</span>
+            </div>
+        </div>
+
+    </div>
+    <!---->
+</main>
+
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script>
+    $("div[name='toggle-label-f2']").on('click',function () {
+      let a = $(this).find("i").hasClass('icon-xiangshang1')
+      if(a){
+        $(this).find("i").removeClass('icon-xiangshang1').addClass('icon-xiangxia')
+      }else{
+        $(this).find("i").addClass('icon-xiangshang1').removeClass('icon-xiangxia')
+      }
+      $(this).find("div[name='zyh-label-f2']").slideToggle()
+    })
+</script>
+</body>
+</html>

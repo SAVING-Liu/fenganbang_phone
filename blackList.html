@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>风安帮</title>
+<meta charset="utf-8"/>
+<meta name="author" content="jbs"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="Expires" content="-1"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta name="description" content="" />
+<meta name="Keywords" content="" />
+<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+<link rel="stylesheet" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/jyt_public.css">
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<style>
+	body{
+		background-color:#f5f5f5;
+	}
+</style>
+</head>
+<body>
+<div class="public_head">
+	<h3>黑名单</h3>
+	<a href="javascript:history.go(-1);" class="iconfont icon-fanhui"></a>
+</div>
+<ul class="jyt_titul">
+	<li class="jyt_cli2">安装团队</li>
+	<li>品牌商</li>
+</ul>
+<div class="jyt_notice">
+<!--安装团队-->
+	<ul class="jyt_blackul">
+		<li>
+			<h3>用户名</h3>
+			<h3>原因</h3>
+			<h3>日期</h3>
+		</li>
+		<li>
+			<p>CR小杀</p>
+			<p>未能按时完成工程</p>	
+			<p>2017-07-05</p>
+		</li>
+		<li>
+			<p>CR小杀</p>
+			<p>未能按时完成工程</p>	
+			<p>2017-07-05</p>
+		</li>
+		<li>
+			<p>CR小杀</p>
+			<p>未能按时完成工程</p>	
+			<p>2017-07-05</p>
+		</li>
+		<li>
+			<p>CR小杀</p>
+			<p>未能按时完成工程</p>	
+			<p>2017-07-05</p>
+		</li>
+	</ul>
+<!--品牌商-->
+	<ul class="jyt_blackul" style="display: none;">
+		<li>
+			<h3>用户名</h3>
+			<h3>原因</h3>
+			<h3>日期</h3>
+		</li>
+		<li>
+			<p>CR小杀</p>
+			<p>未能按时完成工程</p>	
+			<p>2017-07-05</p>
+		</li>
+	</ul>
+</div>
+<script type="text/javascript">
+	$(".jyt_titul li").on("click",function () {
+		$(".jyt_titul li").removeClass('jyt_cli2');
+		$(this).addClass('jyt_cli2');
+		var index = $(this).index();
+		$(".jyt_notice .jyt_blackul").css('display', 'none');
+		$(".jyt_notice .jyt_blackul").eq(index).fadeIn(500);
+	})
+</script>
+</body>
+</html>

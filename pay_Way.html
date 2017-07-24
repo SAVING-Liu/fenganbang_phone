@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>风安帮-支付方式</title>
+		<meta charset="utf-8" />
+		<meta name="author" content="jbs" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="Expires" content="-1" />
+		<meta http-equiv="Cache-Control" content="no-cache" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta name="description" content="" />
+		<meta name="Keywords" content="" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/fly.css" />
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<style>
+			body {
+				background-color: #f5f5f5;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="public_head">
+			<h3>支付方式</h3>
+			<a href="javascript:history.go(-1);" class="iconfont icon-fanhui"></a>
+			<!--<i class="iconfont icon-sousuo"></i>-->
+		</div>
+		<div class="pay_cont">
+			<i class="iconfont icon-zhifubao" style="color: #08a1f8;"></i>
+			<p>支付宝支付</p>
+			<i class="zpf-i iconfont icon-weixuanzhong icon-xuanzhong"></i>
+		</div>
+		<div class="pay_cont">
+			<i class="iconfont icon-weixinzhifu" style="color: #61ba55;"></i>
+			<p>微信支付</p>
+			<i class="zpf-i iconfont icon-weixuanzhong"></i>
+		</div>
+		<div class="pay_cont">
+			<i class="iconfont icon-yuezhifu" style="color: #ff910e;"></i>
+			<p>余额支付<span>3666.00元</span></p>
+			<i class="zpf-i iconfont icon-weixuanzhong"></i>
+		</div>
+		<div class="pay_foot">
+			<p>保证金：<span><span style="font-size: 12px;margin-left: 0;">￥</span>209.70</span></p>
+			<input type="button" id="" value="付款" />
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(".pay_cont").on("click", function (){
+	          $(".zpf-i").removeClass('icon-xuanzhong');
+	          $(this).find(".zpf-i").addClass("icon-xuanzhong");
+	          var box = $(this);
+	          var index = goIndex(box);
+	         });
+	        function goIndex(it) {
+	            var big = it.parent();
+	            for (var i = 0; i < big.children().length; i++) {
+	                if (big.children().eq(i)[0] == it[0]) {
+	                    return i;
+	                }
+	            }
+	        };
+		
+	</script>
+</html>

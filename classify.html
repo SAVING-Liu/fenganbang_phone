@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>风安帮</title>
+<meta charset="utf-8"/>
+<meta name="author" content="jbs"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="Expires" content="-1"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta name="description" content="" />
+<meta name="Keywords" content="" />
+<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+<link rel="stylesheet" href="css/common.css"/>
+<link rel="stylesheet" href="css/jyt_public.css"/>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<style>
+	body{
+		background-color:#f5f5f5;
+	}
+</style>
+</head>
+<body>
+<div class="public_head">
+	<a href="javascript:history.go(-1);" class="iconfont icon-fanhui"></a>
+	<div class="jyt_soubox">
+		<select>
+			<option>找需求</option>
+			<option>找商品</option>
+			<option>找团队</option>
+			<option>找店铺</option>
+		</select>
+		<input type="text" placeholder="找专业人做专业事" />
+		<button type="button" class="iconfont icon-sousuo"></button>
+	</div>
+</div>
+<div class="jyt_con">
+	<div class="jyt_left">
+		<ul>
+			<li class="jyt_cli1">空调</li>
+			<li>新风系统</li>
+		</ul>
+		<p>敬请期待</p>
+	</div>
+	<div class="jyt_right">
+		<div class="jyt_box1">
+			<div class="jyt_box1tit">
+				<p>空调</p>
+				<span></span>
+			</div>
+			<ul>
+				<li>
+					<a href="javascript:void(0);">
+						<img src="images/jyt_goods.jpg" />
+						<p>壁挂机</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">
+						<img src="images/jyt_goods.jpg" />
+						<p>中央空调</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">
+						<img src="images/jyt_goods.jpg" />
+						<p>柜式机</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">
+						<img src="images/jyt_selbg1.jpg" />
+						<p>组合机</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="jyt_box1" style="display: none;">
+			<div class="jyt_box1tit">
+				<p>新风系统</p>
+				<span></span>
+			</div>
+			<ul>
+				<li>
+					<a href="javascript:void(0);">
+						<img src="images/jyt_goods.jpg" />
+						<p>壁挂机</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">
+						<img src="images/jyt_goods.jpg" />
+						<p>壁挂机</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">
+						<img src="images/jyt_goods.jpg" />
+						<p>壁挂机</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">
+						<img src="images/jyt_goods.jpg" />
+						<p>壁挂机</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+<footer class="lf_footer">
+	<div class="lf_footerCon">
+		<a href="javascript:void(0);" class="lf_jump lf_footerOn">
+			<img src="images/icon-11.png" alt=""/>
+			<span class="lf_footerlist-cn">首页</span>
+		</a>
+		<a href="javascript:void(0);" class="lf_jump">
+			<img src="images/icon-2.png" alt=""/>
+			<span class="lf_footerlist-cn">发需求</span>
+		</a>
+		<a href="javascript:void(0);" class="lf_jump">
+			<img src="images/icon-3.png" alt=""/>
+			<span class="lf_footerlist-cn">开店</span>
+		</a>
+		<a href="javascript:void(0);" class="lf_jump">
+			<img src="images/icon-4.png" alt=""/>
+			<span class="lf_footerlist-cn">购物车</span>
+		</a>
+		<a href="javascript:void(0);" class="lf_jump">
+			<img src="images/icon-5.png" alt=""/>
+			<span class="lf_footerlist-cn">我</span>
+		</a>
+	</div>
+</footer>
+<script type="text/javascript">
+function spanW(){
+	var xx1 = $(".jyt_box1tit").width();
+	var xx2 = $(".jyt_box1tit p").width();
+	$(".jyt_box1tit span").css("width", xx1 - xx2 -10 );
+}
+spanW()
+//控制图片大小
+var xx1234 = $(".jyt_box1 ul li a img").width();
+	$(".jyt_box1 ul li a img").css('height', xx1234);
+	
+	$(".jyt_left ul li").on("click",function () {
+		$(".jyt_left ul li").removeClass('jyt_cli1');
+		$(this).addClass('jyt_cli1');
+		var index = $(this).index();
+		$(".jyt_right .jyt_box1").css('display', 'none');
+		$(".jyt_right .jyt_box1").eq(index).css('display', 'block');
+		var xx1 = $(".jyt_box1tit").eq(index).width();
+		var xx2 = $(".jyt_box1tit p").eq(index).width();
+		$(".jyt_box1tit span").css("width", xx1 - xx2 -10 );
+	})
+</script>
+</body>
+</html>

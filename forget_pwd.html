@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>风安帮</title>
+<meta charset="utf-8"/>
+<meta name="author" content="jbs"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="Expires" content="-1"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta name="description" content="" />
+<meta name="Keywords" content="" />
+<link rel="stylesheet" href="css/swiper.min.css"/>
+<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+<link rel="stylesheet" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/ly_style.css">
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+<header>
+	<h1>忘记密码</h1>
+	<i class="iconfont icon-fanhui" onclick="window.location.href='login.html'"></i>
+</header>
+<div class="ly_logo">
+	<img src="images/ly_tu1.png">
+</div>
+<img src="images/ly_tu2.png" class="ly_img1">
+<form>
+	<div class="ly_ins">
+		<i class="iconfont icon-yonghuming"></i>
+		<span></span>
+		<input type="text" name="phone" placeholder="手机号码/用户名" class="ly_text1">
+	</div>
+	<div class="ly_ins">
+		<i class="iconfont icon-shouji"></i>
+		<span></span>
+		<input type="text" name="yzm" placeholder="验证码" class="ly_text1 ly_text2">
+		<button class="get_yzm" id="btn_yzm">获取验证码</button>
+	</div>
+	<div class="ly_ins">
+		<i class="iconfont icon-mima"></i>
+		<span></span>
+		<input type="password" name="pwd" placeholder="新密码" class="ly_text1">
+	</div>
+	<div class="ly_ins">
+		<i class="iconfont icon-mima"></i>
+		<span></span>
+		<input type="password" name="pwd" placeholder="确认密码" class="ly_text1">
+	</div>
+	<input type="submit" name="sub" value="去登录" class="ly_sub1">
+</form>
+<script type="text/javascript">
+	  var wait=60;
+	  function time(o) {
+	      if (wait == 0) {
+	              o.removeAttribute("disabled");
+	              o.innerHTML="获取验证码";
+	              wait = 60;
+	          } else {
+	              o.setAttribute("disabled", true);
+	              o.innerHTML="重新发送(" + wait + ")";
+	              wait--;
+	              setTimeout(function() {
+	              time(o)
+	          }, 1000)
+	      }
+	  };
+	  time(btn_yzm);
+</script>
+</body>
+</html>

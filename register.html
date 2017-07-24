@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>风安帮</title>
+<meta charset="utf-8"/>
+<meta name="author" content="jbs"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="Expires" content="-1"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta name="description" content="" />
+<meta name="Keywords" content="" />
+<link rel="stylesheet" href="css/swiper.min.css"/>
+<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+<link rel="stylesheet" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/ly_style.css">
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<style type="text/css">
+	.ly_sub1{margin: 10px auto;}
+</style>
+</head>
+<body>
+<header>
+	<h1>注册</h1>
+	<i class="iconfont icon-fanhui" onclick="window.location.href='login.html'"></i>
+	<a href="login.html">登录</a>
+</header>
+<div class="ly_logo">
+	<img src="images/ly_tu1.png">
+</div>
+<img src="images/ly_tu2.png" class="ly_img1">
+<form>
+	<div class="ly_sel">
+		<p>选择身份：<span>品牌商</span></p>
+		<i class="iconfont icon-you"></i>
+	</div>
+	<div class="ly_ins">
+		<i class="iconfont icon-yonghu"></i>
+		<span></span>
+		<input type="text" name="phone" placeholder="请输入手机号码" class="ly_text1" id="phone">
+	</div>
+	<div class="ly_ins">
+		<i class="iconfont icon-shouji"></i>
+		<span></span>
+		<input type="text" name="yzm" placeholder="验证码" class="ly_text1 ly_text2" id="yzm">
+		<button class="get_yzm" id="btn_yzm">获取验证码</button>
+	</div>
+	<div class="ly_ins">
+		<i class="iconfont icon-cardid"></i>
+		<span></span>
+		<input type="text" name="card_id" placeholder="身份证号18位" class="ly_text1" id="card_id">
+	</div>
+	<div class="ly_ins">
+		<i class="iconfont icon-mima"></i>
+		<span></span>
+		<input type="password" name="pwd" placeholder="登录密码" class="ly_text1" id="pwd1">
+	</div>
+	<div class="ly_ins">
+		<i class="iconfont icon-mima"></i>
+		<span></span>
+		<input type="password" name="pwd" placeholder="确认密码" class="ly_text1" id="pwd2">
+	</div>
+	<div class="ly_ins">
+		<i class="iconfont icon-mima"></i>
+		<span></span>
+		<input type="password" name="pwd" placeholder="支付密码" class="ly_text1" id="pwd3">
+	</div>
+	<input type="submit" name="sub" value="去登录" class="ly_sub1">
+</form>
+<div class="ly_select_box"></div>
+<div class="ly_select_main">
+	<h3>品牌商</h3>
+	<ul>
+		<li>安装团队</li>
+		<li>辅材供应商</li>
+		<li>终端消费者</li>
+	</ul>
+</div>
+<script type="text/javascript">
+	  var wait=60;
+	  function time(o) {
+	      if (wait == 0) {
+	              o.removeAttribute("disabled");
+	              o.innerHTML="获取验证码";
+	              wait = 60;
+	          } else {
+	              o.setAttribute("disabled", true);
+	              o.innerHTML="重新发送(" + wait + ")";
+	              wait--;
+	              setTimeout(function() {
+	              time(o)
+	          }, 1000)
+	      }
+	  };
+	  time(btn_yzm);
+	  $(".ly_sel").click(function() {
+	  		$(".ly_select_box").show();
+	  		$(".ly_select_main").show();
+	  });
+	  $(".ly_select_main ul li").click(function() {
+	  		$(".ly_sel p span").text($(this).text());
+	  		$(".ly_select_box").hide();
+	  		$(".ly_select_main").hide();
+	  });
+</script>
+</body>
+</html>

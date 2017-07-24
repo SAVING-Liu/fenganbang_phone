@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8"/>
+	<meta name="author" content="jbs"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta http-equiv="Expires" content="-1"/>
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta name="description" content="" />
+	<meta name="Keywords" content="" />
+	<link rel="stylesheet" href="css/swiper.min.css"/>
+	<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+	<link rel="stylesheet" href="css/common.css"/>
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+
+	<link rel="stylesheet" href="css/wy_main.css">
+	<style>
+		body{
+			background-color:#f6f6f6;
+		}
+	</style>
+    </head>
+    <title>风安帮-我的订单</title>
+    <body>
+    	<!-- 头部 -->
+		<div class="public_head">
+		<meta http-equiv="Pragma" content="no-cache"/>
+			<h3>我的订单</h3>
+			<a href="javascript:history.go(-1);" class="iconfont icon-fanhui"></a>
+			<!-- <i class="iconfont icon-sousuo"></i> -->
+		</div>
+		<!-- 中间部分 -->
+		<div class="wy_order_content">
+			<div class="wy_fenge"></div>
+			<!-- 导航 -->
+			<ul class="wy_order_ul">
+				<li class="wy_order_li wy_order_li_on">
+					<p>待付款</p>
+				</li>
+				<li class="wy_order_li">
+					<p>待发货</p>
+				</li>
+				<li class="wy_order_li">
+					<p>待收货</p>
+				</li>
+				<li class="wy_order_li">
+					<p>已完成</p>
+				</li>
+			</ul>
+
+			<div class="wy_orderBox">
+				<!-- 选项卡-待付款 -->
+				<div class="wy_orderBody">
+					<!-- 订单盒子 -->
+					<div class="wy_order_box">
+						<!-- 编号 -->
+						<div class="wy_order_top">
+							斯美特空调配件店<span class="iconfont icon-you"></span>
+							<p>待付款</p>
+						</div>
+						<div class="wy_order_bottom">
+							<!-- 商品 -->
+							<div class="wy_order_goods">
+								<div class="wy_order_list">
+									<a href="orderPay.html">
+										<img src="images/wy_order_goods.png" alt="">
+										<p class="wy_titP">空调配件金属铁三叶风页</p>
+										<p class="wy_price">¥<em>39.00</em></p>
+										<span class="wy_number">x <em>1</em></span>
+									</a>
+								</div>
+
+								<div class="wy_order_list">
+									<a href="orderPay.html">
+										<img src="images/wy_order_goods.png" alt="">
+										<p class="wy_titP">空调配件金属铁三叶风页</p>
+										<p class="wy_price">¥<em>39.00</em></p>
+										<span class="wy_number">x <em>1</em></span>
+									</a>
+								</div>
+							</div>
+							<!-- 合计 -->
+							<div class="wy_order_all">
+								<p class="wy_moneyP"><span class="wy_heji">合计：</span>¥<span>86.00</span></p>
+								
+								<button class="wy_order_yesBtn wy_order_yesBtn1" type="button">付款</button><button class="wy_order_noBtn" type="button">取消订单</button>
+							</div>
+						</div>
+					</div>
+					
+					<!-- 订单盒子 -->
+					<div class="wy_order_box">
+						<!-- 编号 -->
+						<div class="wy_order_top">
+							斯美特空调配件店<span class="iconfont icon-you"></span>
+							<p>待付款</p>
+						</div>
+						<div class="wy_order_bottom">
+							<!-- 商品 -->
+							<div class="wy_order_goods">
+								<div class="wy_order_list">
+									<a href="orderPay.html">
+										<img src="images/wy_order_goods.png" alt="">
+										<p class="wy_titP">空调配件金属铁三叶风页</p>
+										<p class="wy_price">¥<em>39.00</em></p>
+										<span class="wy_number">x <em>1</em></span>
+									</a>
+								</div>
+							</div>
+							<!-- 合计 -->
+							<div class="wy_order_all">
+								<p class="wy_moneyP"><span class="wy_heji">合计：</span>¥<span>86.00</span></p>
+								
+								<button class="wy_order_yesBtn wy_order_yesBtn1" type="button">付款</button><button class="wy_order_noBtn" type="button">取消订单</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 选项卡-待发货 -->
+				<div class="wy_orderBody" style="display:none">
+					<!-- 订单盒子 -->
+					<div class="wy_order_box">
+						<!-- 编号 -->
+						<div class="wy_order_top">
+							斯美特空调配件店<span class="iconfont icon-you"></span>
+							<p>待发货</p>
+						</div>
+						<div class="wy_order_bottom">
+							<!-- 商品 -->
+							<div class="wy_order_goods">
+								<div class="wy_order_list">
+									<a href="orderSendgoods.html">
+										<img src="images/wy_order_goods.png" alt="">
+										<p class="wy_titP">空调配件金属铁三叶风页</p>
+										<p class="wy_price">¥<em>39.00</em></p>
+										<span class="wy_number">x <em>1</em></span>
+									</a>
+								</div>
+
+								<div class="wy_order_list">
+									<a href="orderSendgoods.html">
+										<img src="images/wy_order_goods.png" alt="">
+										<p class="wy_titP">空调配件金属铁三叶风页</p>
+										<p class="wy_price">¥<em>39.00</em></p>
+										<span class="wy_number">x <em>1</em></span>
+									</a>
+								</div>
+							</div>
+							<!-- 合计 -->
+							<div class="wy_order_all">
+								<p class="wy_moneyP"><span class="wy_heji">合计：</span>¥<span>86.00</span></p>
+								
+								<button class="wy_order_yesBtn wy_order_yesBtn2" type="button">催促发货</button><button class="wy_order_noBtn" type="button">取消订单</button>
+							</div>
+						</div>
+					</div>
+					
+					<!-- 订单盒子 -->
+					<div class="wy_order_box">
+						<!-- 编号 -->
+						<div class="wy_order_top">
+							斯美特空调配件店<span class="iconfont icon-you"></span>
+							<p>待发货</p>
+						</div>
+						<div class="wy_order_bottom">
+							<!-- 商品 -->
+							<div class="wy_order_goods">
+								<div class="wy_order_list">
+									<a href="orderSendgoods.html">
+										<img src="images/wy_order_goods.png" alt="">
+										<p class="wy_titP">空调配件金属铁三叶风页</p>
+										<p class="wy_price">¥<em>39.00</em></p>
+										<span class="wy_number">x <em>1</em></span>
+									</a>
+								</div>
+							</div>
+							<!-- 合计 -->
+							<div class="wy_order_all">
+								<p class="wy_moneyP"><span class="wy_heji">合计：</span>¥<span>86.00</span></p>
+								
+								<button class="wy_order_yesBtn wy_order_yesBtn2" type="button">催促发货</button><button class="wy_order_noBtn" type="button">取消订单</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 选项卡-待收货 -->
+				<div class="wy_orderBody" style="display:none">
+					<!-- 订单盒子 -->
+					<div class="wy_order_box">
+						<!-- 编号 -->
+						<div class="wy_order_top">
+							斯美特空调配件店<span class="iconfont icon-you"></span>
+							<p>待收货</p>
+						</div>
+						<div class="wy_order_bottom">
+							<!-- 商品 -->
+							<div class="wy_order_goods">
+								<div class="wy_order_list">
+									<a href="orderTakegoods.html">
+										<img src="images/wy_order_goods.png" alt="">
+										<p class="wy_titP">空调配件金属铁三叶风页</p>
+										<p class="wy_price">¥<em>39.00</em></p>
+										<span class="wy_number">x <em>1</em></span>
+									</a>
+								</div>
+
+								<div class="wy_order_list">
+									<a href="orderTakegoods.html">
+										<img src="images/wy_order_goods.png" alt="">
+										<p class="wy_titP">空调配件金属铁三叶风页</p>
+										<p class="wy_price">¥<em>39.00</em></p>
+										<span class="wy_number">x <em>1</em></span>
+									</a>
+								</div>
+							</div>
+							<!-- 合计 -->
+							<div class="wy_order_all">
+								<p class="wy_moneyP"><span class="wy_heji">合计：</span>¥<span>86.00</span></p>
+								
+								<button class="wy_order_yesBtn wy_order_yesBtn3" type="button">确认收货</button>
+							</div>
+						</div>
+					</div>
+					
+					<!-- 订单盒子 -->
+					<div class="wy_order_box">
+						<!-- 编号 -->
+						<div class="wy_order_top">
+							斯美特空调配件店<span class="iconfont icon-you"></span>
+							<p>待收货</p>
+						</div>
+						<div class="wy_order_bottom">
+							<!-- 商品 -->
+							<div class="wy_order_goods">
+								<div class="wy_order_list">
+									<a href="orderTakegoods.html">
+										<img src="images/wy_order_goods.png" alt="">
+										<p class="wy_titP">空调配件金属铁三叶风页</p>
+										<p class="wy_price">¥<em>39.00</em></p>
+										<span class="wy_number">x <em>1</em></span>
+									</a>
+								</div>
+							</div>
+							<!-- 合计 -->
+							<div class="wy_order_all">
+								<p class="wy_moneyP"><span class="wy_heji">合计：</span>¥<span>86.00</span></p>
+								
+								<button class="wy_order_yesBtn wy_order_yesBtn3" type="button">确认收货</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 选项卡-已完成 -->
+				<div class="wy_orderBody" style="display:none">
+					<!-- 订单盒子 -->
+					<div class="wy_order_box">
+						<!-- 编号 -->
+						<div class="wy_order_top">
+							斯美特空调配件店<span class="iconfont icon-you"></span>
+							<p>已完成</p>
+						</div>
+						<div class="wy_order_bottom">
+							<!-- 商品 -->
+							<div class="wy_order_goods">
+								<div class="wy_order_list">
+									<a href="orderFinish.html">
+										<img src="images/wy_order_goods.png" alt="">
+										<p class="wy_titP">空调配件金属铁三叶风页</p>
+										<p class="wy_price">¥<em>39.00</em></p>
+										<span class="wy_number">x <em>1</em></span>
+									</a>
+								</div>
+
+								<div class="wy_order_list">
+									<a href="orderFinish.html">
+										<img src="images/wy_order_goods.png" alt="">
+										<p class="wy_titP">空调配件金属铁三叶风页</p>
+										<p class="wy_price">¥<em>39.00</em></p>
+										<span class="wy_number">x <em>1</em></span>
+									</a>
+								</div>
+							</div>
+							<!-- 合计 -->
+							<div class="wy_order_all">
+								<p class="wy_moneyP"><span class="wy_heji">合计：</span>¥<span>86.00</span></p>
+								
+								<button class="wy_order_yesBtn wy_order_yesBtn4" type="button">再来一单</button>
+							</div>
+						</div>
+					</div>
+					
+					<!-- 订单盒子 -->
+					<div class="wy_order_box">
+						<!-- 编号 -->
+						<div class="wy_order_top">
+							斯美特空调配件店<span class="iconfont icon-you"></span>
+							<p>已完成</p>
+						</div>
+						<div class="wy_order_bottom">
+							<!-- 商品 -->
+							<div class="wy_order_goods">
+								<div class="wy_order_list">
+									<a href="orderFinish.html">
+										<img src="images/wy_order_goods.png" alt="">
+										<p class="wy_titP">空调配件金属铁三叶风页</p>
+										<p class="wy_price">¥<em>39.00</em></p>
+										<span class="wy_number">x <em>1</em></span>
+									</a>
+								</div>
+							</div>
+							<!-- 合计 -->
+							<div class="wy_order_all">
+								<p class="wy_moneyP"><span class="wy_heji">合计：</span>¥<span>86.00</span></p>
+								
+								<button class="wy_order_yesBtn wy_order_yesBtn4" type="button">再来一单</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </body>
+</html>
+<script>
+	$(function(){
+		$(".wy_order_ul > li").click(function(){
+			var index = $(this).index();
+			console.log(index);
+			$(".wy_order_ul > li").removeClass('wy_order_li_on');
+			$(".wy_order_ul > li").eq(index).addClass('wy_order_li_on');
+
+			$(".wy_orderBody").fadeOut();
+			$(".wy_orderBody").eq(index).fadeIn("fast");
+		});
+
+		// 付款
+		$(".wy_order_yesBtn1").click(function(){
+			window.location.href = "orderPay.html";
+		});
+		// 发货
+		$(".wy_order_yesBtn2").click(function(){
+			window.location.href = "orderSendgoods.html";
+		});
+		// 收货
+		$(".wy_order_yesBtn3").click(function(){
+			window.location.href = "orderTakegoods.html";
+		});
+		// 已完成
+		$(".wy_order_yesBtn4").click(function(){
+			window.location.href = "orderFinish.html";
+		});
+		// 取消订单
+		$(".wy_order_noBtn").click(function(){
+			$(this).parents('.wy_order_box').css('display', 'none');
+		});
+	})
+</script>

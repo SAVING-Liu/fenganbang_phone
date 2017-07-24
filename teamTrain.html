@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>风安帮-团队培训</title>
+<meta charset="utf-8"/>
+<meta name="author" content="jbs"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="Expires" content="-1"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta name="description" content="" />
+<meta name="Keywords" content="" />
+<link rel="stylesheet" href="css/swiper.min.css"/>
+<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+<link rel="stylesheet" href="css/common.css"/>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+<link rel="stylesheet" href="css/wy_main.css">
+<style>
+	body{
+		background-color:#f5f5f5;
+	}
+</style>
+</head>
+<body>
+<!-- 头部 -->
+<div class="public_head">
+	<h3>团队培训</h3>
+	<a href="javascript:history.go(-1);" class="iconfont icon-fanhui"></a>
+	<!-- <i class="iconfont icon-sousuo"></i> -->
+</div>
+<!-- 内容 -->
+<div class="wy_TTcontent">
+	<!-- 导航 -->
+	<ul class="wy_TTnav">
+		<li class="wy_TTli_on">新风系统安装</li>
+		<li>空调安装</li>
+	</ul>
+
+	<!-- 选项卡-新风 -->
+	<div class="wy_TTbody">
+		<div class="wy_TT_tit">
+			8月11日-10月11日空调安装培训，各种空调安装培训！
+		</div>
+		<div class="wy_TT_list">
+			<span class="wy_span_l">培训时间：</span>
+			<span class="wy_span_r">2017-8-11~2017-10-11</span>
+		</div>
+		<div class="wy_TT_list">
+			<span class="wy_span_l">报名截止：</span>
+			<span class="wy_span_r">2017-10-12</span>
+		</div>
+
+		<div class="wy_TT_list">
+			<span class="wy_span_l">姓名：</span>
+			<input class="wy_span_r" type="text" placeholder="输入您的姓名">
+		</div>
+		<div class="wy_TT_list">
+			<span class="wy_span_l">联系电话：</span>
+			<input class="wy_span_r" type="text" placeholder="输入联系方式">
+		</div>
+		<div class="wy_TT_list">
+			<span class="wy_span_l">地址：</span>
+			<input class="wy_span_r" type="text" placeholder="只输入城市即可">
+		</div>
+	</div>
+	<!-- 选项卡-空调 -->
+	<div class="wy_TTbody" style="display:none">
+		<div class="wy_TT_tit">
+			8月11日-10月11日空调安装培训，各种空调安装培训！
+		</div>
+		<div class="wy_TT_list">
+			<span class="wy_span_l">培训时间：</span>
+			<span class="wy_span_r">2017-8-11~2017-06-11</span>
+		</div>
+		<div class="wy_TT_list">
+			<span class="wy_span_l">报名截止：</span>
+			<span class="wy_span_r">2017-08-12</span>
+		</div>
+
+		<div class="wy_TT_list">
+			<span class="wy_span_l">姓名：</span>
+			<input class="wy_span_r" type="text" placeholder="输入您的姓名">
+		</div>
+		<div class="wy_TT_list">
+			<span class="wy_span_l">联系电话：</span>
+			<input class="wy_span_r" type="text" placeholder="输入联系方式">
+		</div>
+		<div class="wy_TT_list">
+			<span class="wy_span_l">地址：</span>
+			<input class="wy_span_r" type="text" placeholder="只输入城市即可">
+		</div>
+	</div>
+</div>
+
+<footer class="lf_footer wy_footer2">
+	<button type="button">提交报名表</button>
+</footer>
+</body>
+</html>
+<script>
+	$(".wy_TTnav>li").click(function(){
+		var index = $(this).index();
+		$(".wy_TTnav>li").removeClass('wy_TTli_on');
+		$(".wy_TTnav>li").eq(index).addClass('wy_TTli_on');
+
+		$(".wy_TTbody").css('display', 'none');
+		$(".wy_TTbody").eq(index).css('display', 'block');
+	});
+</script>

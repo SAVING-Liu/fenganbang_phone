@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>风安帮</title>
+<meta charset="utf-8"/>
+<meta name="author" content="jbs"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="Expires" content="-1"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta name="description" content="" />
+<meta name="Keywords" content="" />
+<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+<link rel="stylesheet" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/jyt_public.css">
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<style>
+	body{
+		background-color:#f5f5f5;
+	}
+</style>
+</head>
+<body>
+<div class="public_head">
+	<h3>站内信</h3>
+	<a href="javascript:history.go(-1);" class="iconfont icon-fanhui"></a>
+	<button type="button" class="jyt_empty">清空</button>
+</div>
+<ul class="jyt_titul">
+	<li class="jyt_cli2">交易通知</li>
+	<li>系统通知</li>
+</ul>
+<div class="jyt_notice">
+<!--交易通知-->
+	<ul class="jyt_noticeul">
+		<li>
+			<p class="jyt_time">2017-07-05 11：14</p>
+			<div class="jyt_noticxq">
+				<h6>您的需求已发布成功！</h6>
+				<p>您在风安帮网上提交的需求“急需空调安装”，工作人员将尽快通过电话023-88392929、023-8832828与您联系，为您梳理和完善需求，请耐心等待。...</p>
+			</div>
+		</li>
+		<li>
+			<p class="jyt_time">2017-07-05 11：14</p>
+			<div class="jyt_noticxq">
+				<h6>您的需求已发布成功！</h6>
+				<p>您在风安帮网上提交的需求“急需空调安装”，工作人员将尽快通过电话023-88392929、023-8832828与您联系，为您梳理和完善需求，请耐心等待。...</p>
+			</div>
+		</li>
+	</ul>
+<!--系统通知-->
+
+	<ul class="jyt_noticeul" style="display: none;">
+		<li>
+			<p class="jyt_time">2017-07-05 11：14</p>
+			<div class="jyt_noticxq">
+				<h6>您的需求已发布成功！</h6>
+				<p>您在风安帮网上提交的需求“急需空调安装”，工作人员将尽快通过电话023-88392929、023-8832828与您联系，为您梳理和完善需求，请耐心等待。...</p>
+			</div>
+		</li>
+		<li>
+			<p class="jyt_time">2017-07-05 11：14</p>
+			<div class="jyt_noticxq">
+				<h6>您的需求已发布成功！</h6>
+				<p>您在风安帮网上提交的需求“急需空调安装”，工作人员将尽快通过电话023-88392929、023-8832828与您联系，为您梳理和完善需求，请耐心等待。...</p>
+			</div>
+		</li>
+		<li>
+			<p class="jyt_time">2017-07-05 11：14</p>
+			<div class="jyt_noticxq">
+				<h6>您的需求已发布成功！</h6>
+				<p>您在风安帮网上提交的需求“急需空调安装”，工作人员将尽快通过电话023-88392929、023-8832828与您联系，为您梳理和完善需求，请耐心等待。...</p>
+			</div>
+		</li>
+	</ul>
+</div>
+<script type="text/javascript">
+	$(".jyt_titul li").on("click",function () {
+		$(".jyt_titul li").removeClass('jyt_cli2');
+		$(this).addClass('jyt_cli2');
+		var index = $(this).index();
+		$(".jyt_notice .jyt_noticeul").css('display', 'none');
+		$(".jyt_notice .jyt_noticeul").eq(index).fadeIn(500);
+	})
+</script>
+</body>
+</html>

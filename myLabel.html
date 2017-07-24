@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8"/>
+	<meta name="author" content="jbs"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta http-equiv="Expires" content="-1"/>
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta name="description" content="" />
+	<meta name="Keywords" content="" />
+	<link rel="stylesheet" href="css/swiper.min.css"/>
+	<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+	<link rel="stylesheet" href="css/common.css"/>
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+
+	<link rel="stylesheet" href="css/wy_main.css">
+	<style>
+		
+	</style>
+    </head>
+    <title>风安帮-我的标签</title>
+    <body>
+    	<!-- 头部 -->
+		<div class="public_head">
+		<meta http-equiv="Pragma" content="no-cache"/>
+			<h3>我的标签</h3>
+			<a href="javascript:history.go(-1);" class="iconfont icon-fanhui" href="myOrder.html"></a>
+			<!-- <i class="iconfont icon-sousuo"></i> -->
+		</div>
+		<!-- 中间部分 -->
+		<div class="wy_MLcontent">
+			<div class="wy_tip">选择符合自己的标签，让商家快速找到你</div>
+			
+			<div class="wy_MLbody">
+				<h3 class="wy_MLtit">服务区域：</h3>
+
+				<!-- 地址-三级联动 -->
+				<form class="form-inline">
+			        <div id="distpicker5">
+				        <div class="form-group">
+				          <label class="sr-only" for="province10"></label>
+				          <select class="form-control" id="province10"></select>
+				        </div>
+				        <div class="form-group">
+				          <label class="sr-only" for="city10"></label>
+				          <select class="form-control" id="city10"></select>
+				        </div>
+				        <div class="form-group">
+				          <label class="sr-only" for="district10"></label>
+				          <select class="form-control" id="district10"></select>
+				        </div>
+			        </div>
+			    </form>
+				
+				<div class="wy_ML_div1">
+					<h3 class="wy_MLtit">服务内容：</h3>
+					<ul class="wy_ML_fuwu">
+						<li class="wy_MLli_on wy_wy_MLli1">新风系统安装/维修</li>
+						<li>空调安装/维修</li>
+					</ul>
+				</div>
+				<div class="wy_ML_div2">
+					<h3 class="wy_MLtit">服务类型：</h3>
+					<ul class="wy_ML_fuwu">
+						<li class="wy_MLli_on wy_wy_MLli1">短工</li>
+						<li>大工程</li>
+					</ul>
+				</div>
+				
+				<div>
+					<h1 class="wy_ML_teamTit">团队描述:</h1>
+					<textarea class="wy_ML_te" placeholder="介绍一下你的团队优势或者具体服务类型！"></textarea>
+				</div>
+			
+				
+			</div>
+			
+		</div>
+	
+		<!-- footer -->
+		<div class="wy_footer_order">
+			<button class="wy_takeBtn" type="button">确认提交
+			</button>
+		</div>
+    </body>
+</html>
+<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+<script src="js/distpicker.data.js"></script>
+<script src="js/distpicker.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+	$(function(){
+		$(".wy_takeBtn").click(function(){
+			// window.location.href = '';
+		});
+
+		$(".wy_ML_div1>ul> li").click(function(){
+			var index_1 = $(this).index();
+			$(".wy_ML_div1 li").removeClass('wy_MLli_on');
+			$(".wy_ML_div1 li").eq(index_1).addClass('wy_MLli_on');
+		});
+
+		$(".wy_ML_div2>ul> li").click(function(){
+			var index_2 = $(this).index();
+			$(".wy_ML_div2 li").removeClass('wy_MLli_on');
+			$(".wy_ML_div2 li").eq(index_2).addClass('wy_MLli_on');
+		});
+	})
+</script>

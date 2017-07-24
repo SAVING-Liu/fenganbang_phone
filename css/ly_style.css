@@ -1,0 +1,146 @@
+/*
+* @Author: Administrator
+* @Date:   2017-07-21 09:35:37
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-07-22 16:54:06
+*/
+header{
+	width: 100%; height: 45px; background: #3c8fed; position: relative;
+}
+header h1{ text-align: center; color: #FFF; font-size: 18px; line-height: 45px; }
+header a{ display: block; position: absolute; top: 0; right: 0; line-height: 45px; color: #FFF; padding: 0 10px; }
+header i{ display: block; position: absolute; top: 0; left: 0; line-height: 45px; color: #FFF; padding: 0 10px; }
+.ly_logo{ width: 100%; overflow: hidden; background: #3c8fed; padding: 15px 0; }
+.ly_logo img{ display: block; width: 35%; margin: 0 auto; }
+.ly_img1{ display: block; width: 100%; }
+.ly_ins{ width: 85%; overflow: hidden; margin: 0 auto; border-bottom: 1px solid #e0e0e0; padding: 10px 0; }
+.ly_ins i{ display: block; float: left; color: #333333; font-size: 22px; margin-right: 10px;}
+.ly_ins span{ display: block;width: 1px; height: 16px; overflow: hidden; background: #b2b2b2; float: left; margin-top: 6px; margin-right: 10px; }
+.ly_text1{ width: 78%; overflow: hidden; float: left; line-height: 27px; border: 0; background: none; }
+.ly_sub1{ display: block; width: 90%; height: 40px; font-size: 18px; border: 0; background: #3c8fed; color: #FFF; margin: 40px auto 30px; border-radius: 18px; }
+.ly_lt{width: 90%; margin: 0 auto; overflow: hidden; font-size: 14px; color: #727272;}
+.ly_lt label{ display: block;float: left; }
+.ly_lt label input[type="checkbox"]{ position: relative; top: 2px; margin-right: 4px; }
+.ly_lt a{ display: block;float: right; color: #727272; text-decoration: underline;}
+.ly_text2{ width: 40%; }
+.get_yzm{ float: right; border: 1px solid #3c8fed; background: none; color: #3c8fed; padding: 4px 10px; border-radius: 5px; }
+.ly_sel{width: 85%; overflow: hidden; margin: 0 auto; border-bottom: 1px solid #e0e0e0; padding: 10px 0; }
+.ly_sel p{ float: left; color: #333333; font-size: 15px; margin-right: 10px;}
+.ly_sel p span{ color: #a5a5a5; }
+.ly_sel i{ display: block; float: right; color: #8b8b8b; font-size: 14px;  margin-top: 4px;}
+.ly_select_box{ width: 100%; height: 100%; background: #000; position: absolute; top: 0; left: 0;filter:alpha(opacity=50);
+ -moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5; display: none; }
+.ly_select_main{ width: 300px; overflow: hidden; background: #FFF; position: absolute; top: 50%; left: 50%; margin-left: -150px; border-radius: 10px; display: none;}
+.ly_select_main h3{ border-bottom: 1px solid #dadada; background: #f3f3f3; color: #666666; font-size: 16px; text-align: center; padding: 10px 0; }
+.ly_select_main ul li{ width: 100%; overflow:hidden; border-bottom: 1px solid #dadada; color: #666666; font-size: 16px; text-align: center; padding: 10px 0;}
+.ly_select_main ul li:last-child{ border-bottom: 0; }
+
+.ly_msxq_1{ width: 100%; overflow: hidden; border-top: 1px solid #eaeaea; margin-top: 10px;}
+.ly_msxq_2{ width: 100%; overflow: hidden; background: #FFF; border-bottom: 1px solid #eaeaea; padding: 5px 0; }
+.ly_msxq_2 span{ display: block; float: left; color: #7f7f7f; font-size: 14px; padding: 0 10px; line-height: 34px; }
+.ly_msxq_text1{ width: 60%; float: right; overflow: hidden; margin-right: 2%; text-align: right; height: 30px; border: 0; }
+.ly_h3{ font-size: 13px; color: #3c8fed; text-align: center; padding: 10px 0 0 0; }
+.ly_h3 i{ position: relative; top: 1px; margin-right: 3px; }
+.xq_yq{ width: 96%; overflow: hidden; border: 0; border-bottom: 1px solid #eaeaea; height: 70px; padding: 2%; margin-bottom: 55px; color: #7f7f7f; }
+.ly_xq_btn{ width: 100%; height: 45px; background: #3c8fed; border: 0; color: #FFF; font-size: 16px; position: fixed; bottom: 0; left: 0; }
+
+.ly_xq_box{ width: 100%; height: 100%; background: #000; position: absolute; top: 0; left: 0;filter:alpha(opacity=50);
+ -moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5; display: none;  }
+.ly_xq_main{width: 300px; overflow: hidden; background: #FFF; position: absolute; top: 30%; left: 50%; margin-left: -150px; border-radius: 10px;display: none; }
+.ly_xq_main h1{ font-size: 18px; color: #333333; text-align: center; padding: 20px 0; }
+.ly_xq_main h3{ font-size: 14px; color: #666666; text-align: center; padding-bottom: 20px; }
+.ly_xq_main div{ border-top: 1px solid #cecece; }
+.ly_xq_main div button{ width: 50%; float: left; border: 0; background: none; padding: 15px 0; color: #666666; font-size: 14px; }
+.ly_xq_main div button:nth-child(1){ border-right: 1px solid #cecece; }
+.ly_xq_main div button:nth-child(2){ color: #3c8fed;}
+
+.ly_fbcg_btn{position: absolute; top: 0; right: 0; height: 50px; border: 0; background: none; color: #666666; font-size: 16px; font-family: "微软雅黑";}
+.ly_fbcg_main{ width: 100%; overflow: hidden; background: #FFF; margin-top: 10px; padding: 100px 0; }
+.ly_fbcg_main img{ display: block; margin: 0 auto; width: 10%; }
+.ly_fbcg_main h3{ text-align: center; color: #009a63; font-size: 18px; padding: 20px 0 10px 0; }
+.ly_fbcg_main p{ text-align: center; color: #727272; font-size: 14px; }
+.ly_fbcg_a{width: 100%; height: 45px; background: #3c8fed; border: 0; color: #FFF; font-size: 16px; position: fixed; bottom: 0; left: 0; text-align: center; line-height: 45px;}
+.ly_openShop_agreement{width: 85%; overflow: hidden; margin: 0 auto 40px; color: #727272;  padding: 10px 0; font-size: 12px;}
+.ly_openShop_agreement span{ color: #0478e6; }
+.ly_openShop_agreement input[type="checkbox"]{ position: relative; top: 2px; margin-right: 4px;}
+
+.ly_bindAccount{ width: 100%; overflow: hidden; background: #FFF; margin-top: 10px; }
+.ly_bindAccount div{ width: 100%; overflow: hidden; }
+.ly_bindAccount div a{ display: block; width: 100%; overflow: hidden; padding: 10px 0; }
+.ly_bindAccount div a i{ font-size: 26px; display: block; float: left; margin: 0 2%;}
+.ly_bindAccount div a span:nth-child(2){ display: block; float: left; color: #666666; font-size: 14px; margin-top:4px; }
+.ly_bindAccount div a span:nth-child(3){ display: block; float: right; color: #999999; font-size: 14px; margin-top:4px; margin-right: 2%;}
+.ly_bindAccount div:nth-child(1){ border-bottom: 1px solid #eaeaea; }
+.ly_bindAccount div:nth-child(1) a i{ color: #1296db; }
+.ly_bindAccount div:nth-child(2) a i{ color: #4fb348; }
+.ly_bindAccount div:nth-child(1) a span:nth-child(3){ color: #ca9835; }
+
+.ly_address{ width: 100%; overflow: hidden; margin-bottom: 60px; }
+.ly_address ul li{ width: 100%; overflow: hidden; background: #FFF; margin-top: 10px; border-bottom: 1px solid #eaeaea; border-top: 1px solid #eaeaea;}
+.ly_address_1{ width: 96%; overflow: hidden; padding: 10px 2%; }
+.ly_add_name{ display: block; float: left; color: #666666; }
+.ly_add_phone{ display: block; float: right; color: #666666;}
+.ly_address_2{ width: 96%; overflow: hidden; border-bottom: 1px solid #eaeaea; color: #666; padding:0 2% 10px; font-size: 15px;}
+.ly_address_3{ width: 96%; overflow: hidden; padding: 0 2%;}
+.ly_selected{ float: left; color: #333333; font-size: 16px; line-height: 40px; }
+.ly_delete{float: right; color: #666; font-size: 16px; line-height: 40px;}
+.icon-xuanzhong{ color: #3b8ce9; }
+.ly_add_address{width: 100%; text-align: center; line-height: 45px; height: 45px; background: #3c8fed; border: 0; color: #FFF; font-size: 16px; position: fixed; bottom: 0; left: 0;}
+
+.editPwd_lb{ width: 100%; overflow: hidden; background: #FFF; border-top: 1px solid #eaeaea; margin-top: 10px; }
+.editPwd_lb li{ width: 100%; overflow: hidden; border-bottom: 1px solid #eaeaea; }
+.editPwd_lb li a{ width: 96%; overflow: hidden; display: block; padding: 12px 2%;  }
+.editPwd_lb li a span{ display: block; float: left; font-size: 14px; color: #666666;}
+.editPwd_lb li a i{ display: block; float: right; font-size: 14px; color: #adadad; margin-top: 5px;}
+
+.ly_editLoginPwd{ width: 95%; overflow: hidden; margin: 0 auto; }
+.ly_editLoginPwd_1{width: 100%; overflow: hidden; border-bottom: 1px solid #c1c1c1; padding: 10px 0;}
+.ly_editLoginPwd_1 i{ display: block; float: left; font-size: 26px; color: #3b8ce9; margin-right: 2%; margin-top: 1px; }
+.ly_elp_text{ width: 87%; height: 30px; line-height: 30px; border:0;}
+.ly_elp_text2{ width: 54%; height: 30px; line-height: 30px; border:0;}
+.get_yzm2{ float: right; border: 1px solid #3c8fed; background: #f0f6fd; color: #3c8fed; padding: 8px 10px; border-radius: 3px; }
+
+.ly_editLoginPwd_btn{width: 100%; font-weight: bold; letter-spacing: 2px; height: 45px; background: #3c8fed; border: 0; color: #FFF; font-size: 16px; position: fixed; bottom: 0; left: 0;}
+.ly_addAddress{ width: 100%; overflow: hidden; background: #FFF; border-bottom: 1px solid #eaeaea; font-size: 14px; color: #666666; }
+.ly_addAddress_1{ width: 95%; overflow: hidden; border-bottom: 1px solid #eaeaea; margin:0 auto; padding: 10px 0;}
+.ly_addAddress_1 span{ display: block; float: left; }
+.ly_addAddress_text1{ float: right; text-align: right; border: 0; }
+.ly_addAddress_1 p{ float: right; margin-right: 2%; }
+.ly_addAddress_1 i{ float: right; font-size: 14px; position: relative; top: 3px; }
+.ly_xxdz{ display: block;width: 95%; overflow: hidden;margin:0 auto; border: 0; height: 70px; padding: 10px 0; }
+
+.ly_addAddress_2{ width: 100%; overflow: hidden; height: 45px; margin-top: 10px; background: #FFF;border-bottom: 1px solid #eaeaea;border-top: 1px solid #eaeaea; font-size: 14px; color: #666666;}
+.ly_addAddress_2 span{ display: block; float: left; margin-left: 2%; line-height: 45px; }
+#div1{
+     width: 50px;
+     height: 26px;
+     border-radius: 50px;
+     position: relative;
+     float: right;
+     top: 10px;
+     margin-right: 2%;
+ }
+ #div2{
+     width: 22px;
+     height: 22px;
+     border-radius: 22px;
+     position: absolute;
+     background: white;
+ }
+ .open1{
+     background: rgba(0,184,0,0.8);
+ }
+ .open2{
+     top: 2px;
+     right: 1px;
+ }
+ .close1{
+     background: rgba(255,255,255,0.4);
+     border:1px solid #CCC;
+     border-left: transparent;
+ }
+ .close2{
+     left: 0px;
+     top: 1px;
+     border:1px solid #CCC;
+ }

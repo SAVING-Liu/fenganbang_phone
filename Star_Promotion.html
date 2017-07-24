@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>星级晋升</title>
+		<meta charset="utf-8" />
+		<meta name="author" content="jbs" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="Expires" content="-1" />
+		<meta http-equiv="Cache-Control" content="no-cache" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta name="description" content="" />
+		<meta name="Keywords" content="" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/fly.css" />
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<style>
+			.maker_box {
+				border-top: 0;
+			}
+			
+			.pay_cont {
+				background: white;
+				margin-bottom: 1px;
+			}
+			
+			.withdrawa_cont {
+				background: white;
+			}
+			
+			.recharge_cont {
+				background: white;
+				margin-top: 15px;
+			}
+		</style>
+	</head>
+
+	<body style="background: #f5f5f5;">
+		<div class="public_head">
+			<h3>星级晋升</h3>
+			<a href="javascript:history.go(-1);" class="iconfont icon-fanhui"></a>
+			<!--<i class="iconfont icon-sousuo"></i>-->
+		</div>
+		<div class="withdrawa_cont star_tan">
+			<p>选择晋升等级</p>
+			<p style="color: #999999;" class="star_choose">- 请选择 -</p>
+		</div>
+		<div class="withdrawa_cont">
+			<p>需要支付金额</p>
+			<p>0<span style="color: #333;margin-left: 5px;">元</span></p>
+		</div>
+		<div class="recharge_cont">
+			<p>请选择支付方式</p>
+		</div>
+		<div class="recharge_active">
+			<div class="pay_cont">
+				<i class="iconfont icon-zhifubao" style="color: #08a1f8;"></i>
+				<p>支付宝支付</p>
+				<i class="zpf-i iconfont icon-weixuanzhong icon-xuanzhong"></i>
+			</div>
+			<div class="pay_cont">
+				<i class="iconfont icon-weixinzhifu" style="color: #61ba55;"></i>
+				<p>微信支付</p>
+				<i class="zpf-i iconfont icon-weixuanzhong"></i>
+			</div>
+			<div class="pay_cont">
+				<i class="iconfont icon-yuezhifu" style="color: #ff910e;"></i>
+				<p>余额支付<span>3666.00元</span></p>
+				<i class="zpf-i iconfont icon-weixuanzhong"></i>
+			</div>
+		</div>
+		<input type="button" name="" class="audit_foot" value="付款" />
+		<div class="star_kuang">
+			<div class="star_cont">
+				<div class="star_top">
+					<p>选择晋升等级</p>
+				</div>
+				<div class="star_main">
+					<p>一星</p>
+					<i class="star_i iconfont icon-weixuanzhong icon-xz"></i>
+				</div>
+				<div class="star_main">
+					<p>二星</p>
+					<i class="star_i iconfont icon-weixuanzhong"></i>
+				</div>
+				<div class="star_main">
+					<p>三星</p>
+					<i class="star_i iconfont icon-weixuanzhong"></i>
+				</div>
+				<div class="star_main">
+					<p>四星</p>
+					<i class="star_i iconfont icon-weixuanzhong"></i>
+				</div>
+				<div class="star_main" style="margin-bottom: 80px;">
+					<p>五星</p>
+					<i class="star_i iconfont icon-weixuanzhong"></i>
+				</div>
+				<input type="button" name="" class="audit_footo" value="确定" />
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(".audit_footo").on("touchend", function() {
+			$(".star_kuang").fadeOut(500);
+			var oP=$(".icon-xz").parent().find("p").text();
+//			console.log(oP);
+			$(".star_choose").text(oP);
+		})
+		$(".star_tan").on("touchend", function() {
+			$(".star_kuang").fadeIn(500);
+		})
+		
+		
+		$(".pay_cont").on("touchend", function() {
+			$(".zpf-i").removeClass('icon-xuanzhong');
+			$(this).find(".zpf-i").addClass("icon-xuanzhong");
+			var box = $(this);
+			var index = goIndex(box);
+		});
+
+		function goIndex(it) {
+			var big = it.parent();
+			for(var i = 0; i < big.children().length; i++) {
+				if(big.children().eq(i)[0] == it[0]) {
+					return i;
+				}
+			}
+		};
+
+		$(".star_main").on("touchend", function() {
+			$(".star_i").removeClass('icon-xz');
+			$(this).find(".star_i").addClass("icon-xz");
+			var box = $(this);
+			var index = goIndex(box);
+		});
+
+		function goIndex(it) {
+			var big = it.parent();
+			for(var i = 0; i < big.children().length; i++) {
+				if(big.children().eq(i)[0] == it[0]) {
+					return i;
+				}
+			}
+		};
+	</script>
+
+</html>

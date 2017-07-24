@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>风安帮</title>
+<meta charset="utf-8"/>
+<meta name="author" content="jbs"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="Expires" content="-1"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta name="description" content="" />
+<meta name="Keywords" content="" />
+<link rel="stylesheet" href="css/swiper.min.css"/>
+<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+<link rel="stylesheet" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/ly_style.css">
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<div class="public_head">
+	<h3>修改登录密码</h3>
+	<a href="javascript:history.go(-1);" class="iconfont icon-fanhui"></a>
+</div>
+<div class="ly_editLoginPwd">
+	<div class="ly_editLoginPwd_1">
+		<i class="iconfont icon-shouji1"></i>
+		<input type="text" name="phone" placeholder="136****2209" class="ly_elp_text" />
+	</div>
+	<div class="ly_editLoginPwd_1">
+		<i class="iconfont icon-yanzhengma"></i>
+		<input type="text" name="yzm" placeholder="请输入短信验证码" class="ly_elp_text2"/>
+		<button class="get_yzm2" id="btn_yzm">获取验证码</button>
+	</div>
+	<div class="ly_editLoginPwd_1">
+		<i class="iconfont icon-mima1"></i>
+		<input type="text" name="pwd1" placeholder="请输入新密码" class="ly_elp_text"/>
+	</div>
+	<div class="ly_editLoginPwd_1">
+		<i class="iconfont icon-mima1"></i>
+		<input type="text" name="pwd2" placeholder="请再次输入密码" class="ly_elp_text"/>
+	</div>
+</div>
+<button class="ly_editLoginPwd_btn">确认</button>
+<script type="text/javascript">
+	  var wait=60;
+	  function time(o) {
+	      if (wait == 0) {
+	              o.removeAttribute("disabled");
+	              o.innerHTML="获取验证码";
+	              wait = 60;
+	          } else {
+	              o.setAttribute("disabled", true);
+	              o.innerHTML="重新发送(" + wait + ")";
+	              wait--;
+	              setTimeout(function() {
+	              time(o)
+	          }, 1000)
+	      }
+	  };
+	  time(btn_yzm);
+</script>
+</body>
+</html>

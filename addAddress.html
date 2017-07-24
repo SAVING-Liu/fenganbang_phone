@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>风安帮</title>
+<meta charset="utf-8"/>
+<meta name="author" content="jbs"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="Expires" content="-1"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta name="description" content="" />
+<meta name="Keywords" content="" />
+<link rel="stylesheet" href="css/swiper.min.css"/>
+<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+<link rel="stylesheet" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/ly_style.css">
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<style>
+	body{
+		background-color:#f5f5f5;
+	}
+</style>
+</head>
+<body>
+<div class="public_head">
+	<h3>添加新地址</h3>
+	<a class="iconfont icon-fanhui"></a>
+</div>
+<div class="ly_addAddress">
+	<div class="ly_addAddress_1">
+		<span>收货人</span>
+		<input type="text" value="yy" class="ly_addAddress_text1" />
+	</div>
+	<div class="ly_addAddress_1">
+		<span>联系电话</span>
+		<input type="text" value="15037740076" class="ly_addAddress_text1"/>
+	</div>
+	<div class="ly_addAddress_1">
+		<span>所在街区</span>
+		<i class="iconfont icon-you"></i>
+		<p>请选择</p>
+	</div>
+	<div class="ly_addAddress_1">
+		<span>街道</span>
+		<i class="iconfont icon-you"></i>
+		<p>请选择</p>
+	</div>
+	<textarea placeholder="请填写详细地址，不少于5个字" class="ly_xxdz"></textarea>
+</div>
+<div class="ly_addAddress_2">
+	<span>设为默认</span>
+	<div id="div1" class="open1">
+	     <div id="div2" class="open2"></div>
+	 </div>
+</div>
+<button class="ly_editLoginPwd_btn">保存</button>
+<script type="text/javascript">
+	 var div2=document.getElementById("div2");
+     var div1=document.getElementById("div1");
+     div2.onclick=function(){
+       div1.className=(div1.className=="close1")?"open1":"close1";
+       div2.className=(div2.className=="close2")?"open2":"close2";
+     }
+</script>
+</body>
+</html>

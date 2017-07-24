@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>风安帮</title>
+		<meta charset="utf-8" />
+		<meta name="author" content="jbs" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="Expires" content="-1" />
+		<meta http-equiv="Cache-Control" content="no-cache" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta name="description" content="" />
+		<meta name="Keywords" content="" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<!--kll-->
+		<link rel="stylesheet" type="text/css" href="css/kll.css" />
+		<script src="js/kll.js" type="text/javascript" charset="utf-8" defer="defer"></script>
+	</head>
+	<body class="klnh-body">
+		<!--头部-->
+		<div class="public_head">
+			<h3>服务大厅</h3>
+			<a href="javascript:history.go(-1);" class="iconfont icon-fanhui"></a>
+			<i class="iconfont icon-sousuo"></i>
+			<input class="kll-search_input" type="text" placeholder="请输入搜索内容" />
+		</div>
+		
+		<!--筛选导航-->
+		<div class="klnh-nav_box">
+			<ul class="klnh-nav">
+				<li class="klnh-nav_li klnh-nav_li_change">
+					综合排序<span class="iconfont icon-bottom"></span>
+				</li>
+				<li class="klnh-nav_li">
+					团队星级
+				</li>
+				<li class="klnh-nav_li">
+					筛选<span class="iconfont icon-filter"></span>
+				</li>
+			</ul>
+			<ul class="klnh-nav_list">
+				<li class="klnh-nav_show iconfont icon-ok">
+					综合排序
+				</li>
+				<li class="klnh-nav_show iconfont">
+					价格由低到高
+				</li>
+				<li class="klnh-nav_show iconfont">
+					价格由高到低
+				</li>
+				<li class="klnh-nav_show iconfont">
+					发布时间
+				</li>
+				<li class="klnh-nav_show iconfont">
+					截止时间
+				</li>
+			</ul>
+		</div>
+		
+		<!--筛选列表-->
+		<div class="klnh-change_box">
+			<h4 class="klnh-change_title">筛选</h4>
+			<div class="klnh-change_search">
+				<dl class="klnh-change_dl">
+					<dt class="klnh-change_dt">价格区间(元)</dt>
+					<dd class="klnh-change_dd">
+						<div class="klnh-change_inbox">
+							<input class="klnh-change_input" type="number" placeholder="最低价" />
+							<span class="klnh-change_line">-</span>
+							<input class="klnh-change_input" type="number" placeholder="最高价" />
+						</div>
+					</dd>
+				</dl>
+				<dl class="klnh-change_dl">
+					<dt class="klnh-change_dt iconfont icon-xiangshang">地址</dt>
+					<dd class="klnh-change_dd">
+						<ul class="klnh-change_ul">
+							<li class="klnh-change_li klnh-change_li_change">郑州市</li>
+							<li class="klnh-change_li">金水区</li>
+						</ul>
+						<h5 class="klnh-change_h4">区域</h5>
+						<ul class="klnh-change_ul">
+							<li class="klnh-change_li klnh-change_li_change">金水区</li>
+							<li class="klnh-change_li">金水区</li>
+							<li class="klnh-change_li">金水区</li>
+							<li class="klnh-change_li">金水区</li>
+							<li class="klnh-change_li">金水区</li>
+							<li class="klnh-change_li">金水区</li>
+							<li class="klnh-change_li">金水区</li>
+							<li class="klnh-change_li">金水区</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl class="klnh-change_dl">
+					<dt class="klnh-change_dt iconfont icon-xiangshang">新风系统</dt>
+					<dd class="klnh-change_dd">
+						<ul class="klnh-change_ul">
+							<li class="klnh-change_li klnh-change_li_change">全部</li>
+							<li class="klnh-change_li">壁挂机</li>
+							<li class="klnh-change_li">壁挂机</li>
+							<li class="klnh-change_li">壁挂机</li>
+							<li class="klnh-change_li">壁挂机</li>
+							<li class="klnh-change_li">壁挂机</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl class="klnh-change_dl">
+					<dt class="klnh-change_dt iconfont icon-xiangshang">空调安装</dt>
+					<dd class="klnh-change_dd">
+						<ul class="klnh-change_ul">
+							<li class="klnh-change_li klnh-change_li_change">全部</li>
+							<li class="klnh-change_li">壁挂机</li>
+							<li class="klnh-change_li">壁挂机</li>
+							<li class="klnh-change_li">壁挂机</li>
+							<li class="klnh-change_li">壁挂机</li>
+							<li class="klnh-change_li">壁挂机</li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+			<div class="klnh-change_submit">
+				<button class="klnh-change_btn">重置</button>
+				<button class="klnh-change_btn">完成</button>
+			</div>
+			
+		</div>
+		
+		<!--展示列表-->
+		<div class="klnh-content">
+			<!--无内容展示-->
+			<div class="klnh-con_none">
+				<img class="klnh-conno_img" src="images/kll_nh1.png" />
+				<p class="klnh-conno_hint">抱歉,没有找到相关内容</p>
+				<h4 class="klnh-conno_all">查看全部</h4>
+			</div>
+			<!--展示列表-->
+			<ul class="klsh-con_list">
+				<li class="klsh-con_li">
+					<dl class="klsh-conli_dl klsh-conli_hot">
+						<dt class="klnh-conli_dt">
+							<img class="klsh-conli_logo" src="images/lf_portrait.png" />
+						</dt>
+						<dd class="klsh-conli_dd">
+							<h3 class="klsh-conli_title">
+								<span class="klsh-conli_company">天马安装</span>
+								<div class="klsh-conli_start">
+									<small class="iconfont icon-start"></small>
+									<small class="iconfont icon-start"></small>
+									<small class="iconfont icon-start"></small>
+									<small class="iconfont icon-shoucang"></small>
+									<small class="iconfont icon-shoucang"></small>
+								</div>
+							</h3>
+							<p class="klsh-conli_show">
+								<small class="klsh-conli_list">服务内容:</small>
+								<span class="klsh-conli_listcon">空调安装/装修</span>
+								<small class="klsh-conli_list">服务类型:</small>
+								<span class="klsh-conli_listcon">大工程</span>
+							</p>
+							<h5 class="klsh-conli_site iconfont icon-site">郑州市 金水区</h5>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8"/>
+	<meta name="author" content="jbs"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta http-equiv="Expires" content="-1"/>
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta name="description" content="" />
+	<meta name="Keywords" content="" />
+	<link rel="stylesheet" href="css/swiper.min.css"/>
+	<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+	<link rel="stylesheet" href="css/common.css"/>
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+
+	<link rel="stylesheet" href="css/wy_main.css">
+	<style>
+		
+	</style>
+    </head>
+    <title>风安帮-我的订单</title>
+    <body>
+    	<!-- 头部 -->
+		<div class="public_head">
+		<meta http-equiv="Pragma" content="no-cache"/>
+			<h3>订单详情</h3>
+			<a href="javascript:history.go(-1);" class="iconfont icon-fanhui" href="myOrder.html"></a>
+			<!-- <i class="iconfont icon-sousuo"></i> -->
+		</div>
+		<!-- 中间部分 -->
+		<div class="wy_orderPay_content">
+		<div class="wy_fenge"></div>
+			<div class="wy_order_box">
+				<!-- 编号 -->
+				<div class="wy_order_top">
+					订单编号：<span>1234612332131231</span>
+					<p>待发货</p>
+				</div>
+				<!-- 地址 -->
+				<div class="wy_orderAddress">
+					<img class="wy_icon1" src="images/wy_icon1.png" alt="">
+					<p class="wy_p1">
+						收件人：<span class="wy_name">杨阳洋</span>
+						电话：<span>1359456425</span>
+					</p>
+					<p class="wy_p2">河南省郑州市金水区黄河路文化路95号新田大厦905</p>
+				</div>
+				<div class="wy_order_top">
+					<a href="javascript:void(0);">
+						斯美特空调配件店<span class="iconfont icon-you"></span>
+					</a>
+					
+				</div>
+
+				
+				<div class="wy_order_bottom">
+					<!-- 商品 -->
+					<div class="wy_order_goods">
+						<div class="wy_order_list">
+							<a href="productPage.html">
+								<img src="images/wy_order_goods.png" alt="">
+								<p class="wy_titP">空调配件金属铁三叶风页</p>
+								<p class="wy_price">¥<em>46.00</em></p>
+								<span class="wy_number">x <em>1</em></span>
+							</a>
+						</div>
+
+						<div class="wy_order_list">
+							<a href="productPage.html">
+								<img src="images/wy_order_goods.png" alt="">
+								<p class="wy_titP">空调配件金属铁三叶风页</p>
+								<p class="wy_price">
+									<span>¥<em>40.00</em></span>
+								</p>
+								<span class="wy_number">x <em>1</em></span>
+							</a>
+						</div>
+					</div>
+					<!-- 费用 -->
+					<div class="wy_order_all wy_order_pay">
+						<span class="wy_rightSpan wy_span2"><i class="wy_heji">合计：</i>¥<em>86.00</em></span>
+					</div>
+				</div>
+			</div>
+			<div class="wy_orderPay_b">
+				<span class="wy_span1">运单号码:</span>
+				<span class="wy_span2">暂无</span>
+			</div>
+		</div>
+	
+		<!-- footer -->
+		<div class="wy_footer_order">
+			<button class="wy_cancelBtn" type="button">取消订单</button>
+			<button class="wy_sureBtn" type="button">提醒发货</button>
+		</div>
+    </body>
+</html>
+<script>
+	$(function(){
+		// 取消订单
+		$(".wy_cancelBtn").click(function(){
+			window.location.href = 'myOrder.html';
+		});
+		// // 付款
+		// $(".wy_sureBtn").click(function(){
+		// 	window.location.href = 'wxpay.html';
+		// });
+	})
+</script>

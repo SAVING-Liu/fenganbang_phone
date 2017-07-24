@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>风安帮</title>
+<meta charset="utf-8"/>
+<meta name="author" content="jbs"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="Expires" content="-1"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta name="description" content="" />
+<meta name="Keywords" content="" />
+<link rel="stylesheet" href="css/swiper.min.css"/>
+<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+<link rel="stylesheet" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/ly_style.css">
+<link rel="stylesheet" type="text/css" href="css/mobiscroll_date.css">
+<style>
+	body{
+		background-color:#f5f5f5;
+	}
+</style>
+</head>
+<body>
+<div class="public_head">
+	<h3>描述需求</h3>
+	<a href="javascript:history.go(-1);" class="iconfont icon-fanhui"></a>
+</div>
+<form>
+	<div class="ly_msxq_1">
+		<div class="ly_msxq_2">
+			<span>需求标题：</span>
+			<input type="text" class="ly_msxq_text1" placeholder="至少8个字" id="xq_title" />
+		</div>
+		<div class="ly_msxq_2">
+			<span>需求地点：</span>
+			<input type="text" class="ly_msxq_text1" placeholder="省份 城市 县区" id="xq_region" />
+		</div>
+	</div>
+	<div class="ly_msxq_1">
+		<div class="ly_msxq_2">
+			<span>项目工期：</span>
+			<input type="text" class="ly_msxq_text1" placeholder="30" id="xq_time" />
+		</div>
+		<div class="ly_msxq_2">
+			<span>截止投标时间：</span>
+			<input type="text" class="ly_msxq_text1" placeholder="输入截止日期" name="USER_AGE" id="USER_AGE" readonly/>
+		</div>
+		<div class="ly_msxq_2">
+			<span>联系方式：</span>
+			<input type="text" class="ly_msxq_text1" placeholder="输入手机号" id="xq_phone" />
+		</div>
+	</div>
+	<h3 class="ly_h3"><i class="iconfont icon-jisuanqi"></i>输入明确预算，明确的预算更能吸引服务商参与</h3>
+	<div class="ly_msxq_1">
+		<div class="ly_msxq_2">
+			<span>托管项目金额：</span>
+			<input type="text" class="ly_msxq_text1" placeholder="￥" id="xq_price" />
+		</div>
+		<div class="ly_msxq_2">
+			<span>预付款比例：</span>
+			<input type="text" class="ly_msxq_text1" placeholder="不能低于20% ￥" id="xq_proportion" />
+		</div>
+		<div class="ly_msxq_2">
+			<span>具体要求：</span>
+		</div>
+		<textarea placeholder="请描述详情" class="xq_yq"></textarea>
+	</div>
+	<input type="submit" value="下一步" class="ly_xq_btn" />
+</form>
+<div class="ly_xq_box"></div>
+<div class="ly_xq_main">
+	<h1>提示</h1>
+	<h3>是否放弃发布需求？</h3>
+	<div>
+		<button>取消</button>
+		<button>确定</button>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/mobiscroll_date.js"></script> 
+<script type="text/javascript" src="js/mobiscroll.js"></script> 
+<script type="text/javascript">
+$(function () {
+	var currYear = (new Date()).getFullYear();	
+	var opt={};
+	opt.date = {preset : 'date'};
+	opt.datetime = {preset : 'datetime'};
+	opt.time = {preset : 'time'};
+	opt.default = {
+		theme: 'android-ics light', //皮肤样式
+		display: 'modal', //显示方式 
+		mode: 'scroller', //日期选择模式
+		dateFormat: 'yyyy-mm-dd',
+		lang: 'zh',
+		showNow: true,
+		nowText: "今天",
+		startYear: currYear - 50, //开始年份
+		endYear: currYear + 10 //结束年份
+	};
+
+	$("#USER_AGE").mobiscroll($.extend(opt['date'], opt['default']));
+
+});
+</script>
+</body>
+</html>

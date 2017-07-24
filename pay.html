@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>风安帮</title>
+<meta charset="utf-8"/>
+<meta name="author" content="jbs"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="Expires" content="-1"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta name="description" content="" />
+<meta name="Keywords" content="" />
+<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+<link rel="stylesheet" href="css/common.css"/>
+<link rel="stylesheet" href="css/jyt_public.css"/>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/zlb_screen.js"></script>
+<style>
+	body{
+		background-color:#f5f5f5;
+	}
+</style>
+</head>
+<body>
+<div class="public_head">
+	<a href="javascript:history.go(-1);" class="iconfont icon-fanhui"></a>
+	<h3>支付</h3>
+</div>
+<div class="jyt_con">
+	<ul class="jyt_payul">
+		<li>
+			<img src="images/jyt_zfb.jpg" />
+			<p>支付宝支付</p>
+			<div class="jyt_payway jyt_payno jyt_payyes"></div>
+		</li>
+		<li>
+			<img src="images/jyt_wx.jpg" />
+			<p>微信支付</p>
+			<div class="jyt_payway jyt_payno"></div>
+		</li>
+		<li>
+			<img src="images/jyt_yue.jpg" />
+			<p>余额支付  3666.00元</p>
+			<div class="jyt_payway jyt_payno"></div>
+		</li>
+	</ul>
+</div>
+<footer class="jyt_payfooter">
+	<p>合计：<span>￥<i>209.70</i></span></p>
+	<input class="jyt_paybtn" value="付款" type="button" />
+</footer>
+<div class="zlb-pop">
+    <div class="zlb-pop-title">
+        <i class="jyt_close icon zlb-pull-left iconfont icon-x"></i>
+        <span>请输入支付密码</span>
+    </div>
+    <ul class="jyt_payul jyt_payul2">
+    	<li>
+			<h5>￥209.7</h5>
+		</li>
+		<li>
+			<img src="images/jyt_yue.jpg" />
+			<p>余额</p>
+			<h6> 3666.00元</h6>
+		</li>
+	</ul>
+    <div class="zlb-input-num">
+        <input class="zlb-pwd" id="pwd" maxlength="6" type="number"/>
+        <div id="input1" class="zlb-num-items"></div>
+        <div id="input2" class="zlb-num-items"></div>
+        <div id="input3" class="zlb-num-items"></div>
+        <div id="input4" class="zlb-num-items"></div>
+        <div id="input5" class="zlb-num-items"></div>
+        <div id="input6" class="zlb-num-items"></div>
+    </div>
+</div>
+<div class="zlb-pop-shadow">
+</div>
+<div class="zlb-keyboard">
+    <ul class="table">
+        <li class="table-cell">1</li>
+        <li class="table-cell">2</li>
+        <li class="table-cell">3</li>
+    </ul>
+    <ul class="table">
+        <li class="table-cell">4</li>
+        <li class="table-cell">5</li>
+        <li class="table-cell">6</li>
+    </ul>
+    <ul class="table">
+        <li class="table-cell">7</li>
+        <li class="table-cell">8</li>
+        <li class="table-cell">9</li>
+    </ul>
+    <ul class="table">
+        <li class="table-cell zlb-bgc">.</li>
+        <li class="table-cell">0</li>
+        <li class="table-cell zlb-bgc"><i data-id="del" class="table-cell icon zlb-pull-left iconfont icon-shuzijianpanshanchu"></i></li>
+    </ul>
+</div>
+<script type="text/javascript">
+var val = 0;
+	$(".jyt_payul li").on("click",function () {
+		$(".jyt_payul li").find(".jyt_payway").removeClass('jyt_payyes');
+		$(this).find(".jyt_payway").addClass('jyt_payyes');
+		val = $(this).index()
+		console.log(val)
+	})
+
+
+	   //关闭弹窗
+    $('.jyt_close').on('click', function (){
+        popHide('none');
+    });
+
+    //付款按钮
+    $('.jyt_paybtn').on('click', function (){
+    	if(val==2){
+	    	popHide('block');
+	        $('.zlb-pwd').trigger('click');
+	        clear(1);
+    	}
+       
+    });
+
+
+    //模拟键盘输入
+    $('.table-cell').on('click', function (){
+        if($(this).find('i').data('id') == 'del'){
+            clear(0);
+        }
+        else{
+            pwd += $(this).text();
+            $('#input' + count).text($(this).text());
+            setTimeout(function (){
+                $('#input' + count).text('*');
+                count++;
+                //6位密码输入完成
+                if(count == 7){
+                    popHide('none');
+//                    alert(pwd);
+                }
+            }, 30);
+//            console.log(pwd);
+        }
+    });
+    var clear = function (num){
+        count = num;
+        pwd = '';
+        $('.zlb-num-items').map(function (){
+            $(this).text('');
+        });
+    }
+    var popHide = function (opt){
+        $('.zlb-pop').css('display', opt);
+        $('.zlb-pop-shadow').css('display', opt);
+        $('.zlb-keyboard').css('display', opt);
+    }
+</script>
+</body>
+</html>
