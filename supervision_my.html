@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>辅材商-我</title>
+<title>监理-我</title>
 <meta charset="utf-8"/>
 <meta name="author" content="jbs"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
@@ -58,44 +58,76 @@
 			<button class="lf_brandAccount">我的账户</button>
 		</div>
 	</div>
-	<div class="lf_brandList" style="border-top:1px solid #eaeaea">
+	<div class="lf_brandMyorder">
+		<div class="lf_lf_brandMyorder-order">
+			<i class="iconfont icon-hongjiuchengicondingdan"></i>
+			<span>我的订单</span>
+		</div>
+		<div class="lf_brandNav lf_displayFlex">
+			<a href="orderPay.html" class="lf_jump">
+				<i class="iconfont icon-qianbao"></i>
+				<span>待付款</span>
+			</a>
+			<a href="orderSendgoods.html" class="lf_jump">
+				<i class="iconfont icon-fahuo"></i>
+				<span>待发货</span>
+			</a>
+			<a href="orderTakegoods.html" class="lf_jump">
+				<i class="iconfont icon-daishouhuo"></i>
+				<span>待收货</span>
+			</a>
+			<a href="orderFinish.html" class="lf_jump">
+				<i class="iconfont icon-yiwancheng"></i>
+				<span>已完成</span>
+			</a>
+		</div>
+	</div>
+	<div style="height:10px;border-top:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;"></div>
+	<div class="lf_brandList">
 		<li>
-			<a href="javascript:void(0);" class="lf_jump lf_clearFloat">
+			<a href="storeChangeNews.html" class="lf_jump lf_clearFloat">
 				<i class="iconfont icon-xiugai1 lf_left"></i>
 				<span>修改资料</span>
 				<i class="iconfont icon-you lf_right"></i>
 			</a>
 		</li>
 		<li>
-			<a href="javascript:void(0);" class="lf_jump lf_clearFloat">
+			<a href="certification.html" class="lf_jump lf_clearFloat">
 				<i class="iconfont icon-renzheng lf_left"></i>
-				<span>企业认证</span>
+				<span>实名认证</span>
 				<i class="iconfont icon-you lf_right"></i>
 			</a>
 		</li>
 		<li>
-			<a href="javascript:void(0);" class="lf_jump lf_clearFloat">
+			<a href="myLabel.html" class="lf_jump lf_clearFloat">
+				<i class="iconfont icon-biaoqian lf_left"></i>
+				<span>我的标签</span>
+				<i class="iconfont icon-you lf_right"></i>
+			</a>
+		</li>
+		<li>
+			<a href="bindAccount.html" class="lf_jump lf_clearFloat">
 				<i class="iconfont icon-bangding-copy lf_left"></i>
 				<span>账户绑定</span>
 				<i class="iconfont icon-you lf_right"></i>
 			</a>
 		</li>
 		<li>
-			<a href="javascript:void(0);" class="lf_jump lf_clearFloat">
+			<a href="deliveryAddress.html" class="lf_jump lf_clearFloat">
+				<i class="iconfont icon-dizhi lf_left"></i>
+				<span>收货地址</span>
+				<i class="iconfont icon-you lf_right"></i>
+			</a>
+		</li>
+		<li style="border:0">
+			<a href="editPwd.html" class="lf_jump lf_clearFloat">
 				<i class="iconfont icon-suozi lf_left"></i>
 				<span>修改密码</span>
 				<i class="iconfont icon-you lf_right"></i>
 			</a>
 		</li>
-		<li style="border:0" class="houtai">
-			<a href="javascript:void(0);" class="lf_jump lf_clearFloat">
-				<i class="iconfont icon-houtai lf_left"></i>
-				<span>后台管理入口</span>
-				<i class="iconfont icon-you lf_right"></i>
-			</a>
-		</li>
 	</div>
-	<div class="lf_brand_out" style="border-bottom:0">
+	<div class="lf_brand_out">
 		<a href="javascript:void(0);" class="lf_jump">
 			<i class="iconfont icon-tuichu lf_left"></i>
 			<span>退出账号</span>
@@ -127,108 +159,5 @@
 		</a>
 	</div>
 </footer>
-<script>
-	$(".houtai").on("touchend", function () {
-		addBox("body",20);
-		outBox("请去电脑网页登录，进行后台操作！");
-	});
-	//生成半透明遮罩
-function addBox(out,zi) {
-	if (!zi) {
-		zi = 10;
-	}
-	var box = $("<div></div>");
-	box.css({
-		"width": "100%",
-		"min-height": "100vh",
-		"position": "fixed",
-		"top": "0",
-		"left": "0",
-		"background": "rgba(0,0,0,0.4)",
-		"zIndex": zi
-	});
-	box.attr("id", "out-boxbg");
-	if ($(out).css("position") === "static") {
-		$(out).css("position", "relative");
-	}
-	box.on("touchstart", function (e) {
-		if (e.target === box[0]) {
-			e.preventDefault();
-		}
-	});
-	$(out).append(box);
-	return "out-boxbg";
-}
-
-//生成弹出框
-function outBox(news, url) {
-	if (!news) {
-		news = "";
-	}
-	if (!url) {
-		url = " ";
-	}
-	//盒子
-	var box = $("<div></div>");
-	box.css({
-		"position": "absolute",
-		"top": "20vh",
-		"left": "10%",
-		"width": "80%",
-		"background": "#fff",
-		"border-radius": "10px",
-		"box-sizing": "border-box",
-		"padding": "10px 20px"
-	});
-	//标题
-	var title = $("<h4></h4>");
-	title.css({
-		"text-align": "center",
-		"font-size": "16px",
-		"color": "#666",
-		"line-height": "2.4em",
-		"border-bottom": "1px solid #e6e6e6"
-	});
-	title.html("提示");
-	//内容
-	var show = $("<p></p>");
-	show.css({
-		"text-align": "center",
-		"padding": "1.2em 0",
-		"font-size": "15px",
-		"line-height": "2em",
-		"color": "#555"
-	});
-	//确认
-	var btnBox = $("<div></div>");
-	btnBox.css({
-		"width": "100%",
-		"overflow": "hidden",
-		"padding-bottom": "10px"
-	});
-	var btnOk = $("<a></a>");
-	btnOk.css({
-		"width": "80%",
-		"display":"block",
-		"margin":"0 auto",
-		"height": "2rem",
-		"color": "#fff",
-		"background": "#3c8fed",
-		"border-radius": "5px",
-		"border": "1px solid #3c8fed",
-		"text-align": "center",
-		"line-height": "2rem"
-	});
-	btnOk.html("知道了");
-	btnOk.attr("href", url);
-	show.html(news);
-	btnBox.append(btnOk);
-	box.append(title);
-	box.append(show);
-	box.append(btnBox);
-	$($("#out-boxbg")).append(box);
-}
-
-</script>
 </body>
 </html>

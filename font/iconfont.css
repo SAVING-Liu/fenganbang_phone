@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1500857654954'); /* IE9*/
-  src: url('iconfont.eot?t=1500857654954#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1500857654954') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1500857654954') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1500857654954#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1501209211310'); /* IE9*/
+  src: url('iconfont.eot?t=1501209211310#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1501209211310') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1501209211310') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1501209211310#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -100,6 +100,8 @@
 .icon-shoucang1:before { content: "\e630"; }
 
 .icon-zhifubao:before { content: "\e625"; }
+
+.icon-zhanneixin:before { content: "\e634"; }
 
 .icon-daishouhuo:before { content: "\e609"; }
 

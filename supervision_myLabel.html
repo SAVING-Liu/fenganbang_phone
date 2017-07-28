@@ -22,7 +22,10 @@
 
 	<link rel="stylesheet" href="css/wy_main.css">
 	<style>
-		
+		.wy_ML_te{
+			background-color: #f5f5f5;
+			height: 120px;
+		}
 	</style>
     </head>
     <title>风安帮-我的标签</title>
@@ -62,30 +65,17 @@
 				<div class="wy_ML_div1 wy_ML_div0">
 					<h3 class="wy_MLtit">服务内容：</h3>
 					<ul class="wy_ML_fuwu">
-						<li class="wy_MLli_on wy_wy_MLli1">新风系统安装/维修</li>
-						<li>空调安装/维修</li>
+						<li class="wy_MLli_on wy_wy_MLli1">工程监理</li>
 					</ul>
 				</div>
-				<div class="wy_ML_div2">
-					<h3 class="wy_MLtit">服务类型：</h3>
-					<ul class="wy_ML_fuwu">
-						<li class="wy_MLli_on wy_wy_MLli1">个体工人</li>
-						<li>工程团队</li>
-					</ul>
-				</div>
-				
 				<div>
-					<h1 class="wy_ML_teamTit">团队描述:</h1>
+					<h1 class="wy_ML_teamTit">项目经验:</h1>
 					<textarea class="wy_ML_te" placeholder="介绍一下你的团队优势或者具体服务类型！"></textarea>
 				</div>
-				<div class="wy_ML_div1 lf_ML_div0">
-					<h3 class="wy_MLtit">免费服务：</h3>
-					<ul class="wy_ML_fuwu">
-						<li class="wy_MLli_on wy_wy_MLli1">施工设计免费咨询报价</li>
-						<li>代画施工图纸</li>
-					</ul>
+				<div>
+					<h1 class="wy_ML_teamTit">个人优势:</h1>
+					<textarea class="wy_ML_te" placeholder="介绍一下你的团队优势或者具体服务类型！"></textarea>
 				</div>
-				
 			</div>
 			
 		</div>
@@ -118,12 +108,6 @@
 			var index_2 = $(this).index();
 			$(".wy_ML_div2 li").removeClass('wy_MLli_on');
 			$(".wy_ML_div2 li").eq(index_2).addClass('wy_MLli_on');
-		});
-
-		$(".lf_ML_div0>ul> li").click(function(){
-			var index_1 = $(this).index();
-			$(".lf_ML_div0 li").removeClass('wy_MLli_on');
-			$(".lf_ML_div0 li").eq(index_1).addClass('wy_MLli_on');
 		});
 	})
 </script>

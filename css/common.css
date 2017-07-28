@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-05-04 18:15:10
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-07-21 19:27:12
+* @Last Modified time: 2017-07-28 10:46:45
 */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,aside,figure,figcaption,blockquote,th,td,a
 {
@@ -100,7 +100,7 @@ font-style:normal;
 .lf_footerCon span{
 	display:block;
 	height:20px;
-	line-height: 24px
+	line-height: 22px
 }
 .lf_footerCon .lf_footerOn{
 	color:#3b8ce9;
